@@ -146,7 +146,7 @@ def invalid_nodes(year,members):
         for idx,each in enumerate(members):
             if each['BirthYear'] < year:
                     print('-------------------------INVALID NODES AND ITS REASON----------------------')
-                    print(each['Name'] +' is invalid as ' +each['BirthYear']+' is less than '+year)
+                    print(each['Name'] +' is invalid as ' +each['BirthYear']+' is less than '+year+'\n')
                     del members[idx]
                     del each
             try:
@@ -185,10 +185,10 @@ for each in family_lines:
         print("Each family name in individual family lines :"+fam)
         
 print('-------SHORTEST FAMILY LINE BASED ON LEAST NUMBER OF MEMBERS IN FAMILY LINE-------')
-print("The Shortest Family line based on number of Member in Family Line :"+str(mins_name))
+print("The Shortest Family line based on number of Member in Family Line :"+str(mins_name)+'\n')
 
 print('----------LONGEST FAMILY LINE BASED ON HIGHEST NUMBER OF MEMBERS IN FAMILY LINE----')
-print("The Longest Family line based on highest number of Member in Family Line :"+str(maxs_name))
+print("The Longest Family line based on highest number of Member in Family Line :"+str(maxs_name)+'\n')
 
 print('-----------------------ALL FAMILY MEMBERS WITH CORRESPONDING AGE------------------')
 all_ages.sort(key = lambda x: x[1])
@@ -197,7 +197,7 @@ print(all_ages)
 start_age=int(y['lineage']['Members'][0]['BirthYear'])              
     
 print('------------------RANGE OF LINEGAE------------')
-print(end_age - start_age)
+print(str(end_age - start_age)+'\n')
 age_num=[int(each[1]) for each in all_ages]
 
 print('------------------MEAN AGE FOR THIS LINEAGE-----------')
